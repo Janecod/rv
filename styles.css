@@ -1,0 +1,201 @@
+
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Navbar styles */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo {
+    height: 40px;
+    margin-right: auto;
+}
+
+.wallet-btn {
+    background: #240000c9;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, text-shadow 0.3s ease-in-out;
+    font-size: 0.9rem;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Subtle shadow for text */
+}
+
+.wallet-btn:hover {
+    background: #0e0202;
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 0, 0, 0.6); /* Glowing effect on hover */
+}
+
+/* Hero Content Styles */
+.hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1.5s ease-out;
+    margin: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 30px rgb(31 0 0);
+    animation: fadeInText 1s ease-out;
+    color: #fff;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.hero-content h1:hover {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 40px rgb(0 0 0 / 70%), 0 0 50px rgb(34 0 0);
+}
+
+
+/* Call-to-action Button Styles (CTA) */
+.cta-btn {
+    background: linear-gradient(37deg, #190101, #431919);
+    border: none;
+    padding: 17px 30px;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #190101;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s, text-shadow 0.3s ease-in-out;
+    text-shadow: 0 0 5px rgb(255 255 255 / 33%);
+}
+
+/* Hover effect for CTA button */
+.cta-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(1deg, #0b0404, #0e0202);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 60%);
+    text-shadow: 0 0 10px #ffffff12, 0 0 20px #aeaeae;
+}
+
+
+/* Hero-text-info (Min. $10,000 RNDR balance) */
+.hero-text-info {
+    font-size: 0.7rem;  /* Adjusted to make text smaller */
+    line-height: 1.2rem;  /* Slight line height for readability */
+    color: rgba(255, 255, 255, 0.7);  /* Light grey */
+    margin-top: 10px;  /* Adds spacing between button and text */
+    text-align: center;  /* Centers the text */
+    font-weight: 400;  /* Keeps it regular for better visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-text-info {
+        font-size: 0.65rem;  /* Smaller on smaller screens */
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .cta-btn {
+        padding: 16px 20px;
+        font-size: 1.4rem;
+    }
+
+    .navbar .wallet-btn {
+        display: none;
+    }
+
+    .navbar .logo {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
